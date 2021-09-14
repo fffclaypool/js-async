@@ -22,7 +22,7 @@ rejectPromise().then(undefined, () => console.log("rejected")); // rejected
 rejectPromise().catch(() => console.log("rejected")); // rejected
 
 /*
-  Promiseではコンストラクタの処理で例外が発生した場合に自動的に例外がキャッチされる。. 例外が発生したPromise
+  Promiseではコンストラクタの処理で例外が発生した場合に自動的に例外がキャッチされる. 例外が発生したPromise
   インスタンスはreject関数を呼び出したのと同じように失敗したものとして扱われる. そのため, Promise内で例外が
   発生するとthenメソッドの第二引数やcatchメソッドで登録したエラー時のコールバック関数が呼び出される. すなわち, 
   Promiseにおける処理ではtry ~ catch構文を使わなくても例外をキャッチできる
